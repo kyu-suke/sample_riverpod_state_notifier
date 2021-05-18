@@ -17,7 +17,28 @@ abstract class CounterState with _$CounterState {
 }
 
 class CounterStateNotifier extends StateNotifier<CounterState> {
-  CounterStateNotifier() : super(CounterState()) {}
+  CounterStateNotifier() : super(CounterState());
 
-  increment() => state = state.copyWith(count: state.count + 1);
+  void increment() => state = state.copyWith(count: state.count + 1);
 }
+
+// class TodoViewModel extends StateNotifier<TodoState> {
+//   TodoViewModel() : super(const TodoState());
+//
+//   void createTodo(String title) {
+//     final id = state.todoList.length + 1;
+//     final newList = [...state.todoList, Todo(id, title)];
+//     state = state.copyWith(todoList: newList);
+//   }
+//
+//   void updateTodo(int id, String title) {
+//     final newList = state.todoList
+//         .map((todo) => todo.id == id ? Todo(id, title) : todo)
+//         .toList();
+//     state = state.copyWith(todoList: newList);
+//   }
+//
+//   void deleteTodo(int id) {
+//     final newList = state.todoList.where((todo) => todo.id != id).toList();
+//     state = state.copyWith(todoList: newList);
+//   }

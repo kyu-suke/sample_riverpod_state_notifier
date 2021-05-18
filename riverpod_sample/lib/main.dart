@@ -32,6 +32,7 @@ class Home extends StatelessWidget {
         // You could also use the hook "useProvider" if you uses flutter_hooks
         child: Consumer(builder: (context, watch, _) {
           final count = watch(counterProvider).state;
+          print("watch");
           return Text('$count');
         }),
       ),

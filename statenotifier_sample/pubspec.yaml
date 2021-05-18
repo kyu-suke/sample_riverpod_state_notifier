@@ -29,6 +29,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons:
   provider: ^5.0.0
+  flutter_riverpod: ^0.14.0+3
   state_notifier: ^0.7.0
   flutter_state_notifier: ^0.7.0
   freezed_annotation:
