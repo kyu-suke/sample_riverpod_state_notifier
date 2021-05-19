@@ -17,9 +17,19 @@ abstract class CounterState with _$CounterState {
 }
 
 class CounterStateNotifier extends StateNotifier<CounterState> {
+
+  // NewsQueryService _newsQueryService;
+  //
+  // NewsController(this._newsQueryService) : super(NewsState(loading: false));
+
   CounterStateNotifier() : super(CounterState());
 
   void increment() => state = state.copyWith(count: state.count + 1);
+
+//   void increment() {
+// print("asdfasdfasdsadf");
+//   }
+
 }
 
 // class TodoViewModel extends StateNotifier<TodoState> {
